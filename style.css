@@ -70,6 +70,11 @@ p.lead{font-size:19px;line-height:1.7;color:var(--ink-soft);}
 .page-body p{font-size:18px;line-height:1.7;color:var(--ink-soft);margin:0 0 24px;}
 .page-body h2{font-size:24px;margin:56px 0 16px;}
 
+.figure{margin:36px 0;}
+.figure img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.figure figcaption{font-size:13px;color:var(--ink-soft);margin-top:10px;line-height:1.5;}
+.figure.figure-inline img{background:#fff;object-fit:contain;padding:24px;}
+
 .faq-item{border-top:1px solid var(--line);padding:24px 0;}
 .faq-q{display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:16px;}
 .faq-q h3{font-size:19px;margin:0;}
