@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#113a59">
+  <meta name="description" content="Øveprøve i energi og elektrisitet for 7. trinn. 40 flervalgsoppgaver med forklaringer, øvemodus og prøvemodus.">
+  <title>Energi og elektrisitet – øveprøve | 7. trinn</title>
+  <style>
+    :root{--navy:#113a59;--deep:#0c2e48;--teal:#087f79;--mint:#def6ec;--gold:#f3c463;--paper:#f4f7fa;--text:#1b3042;--muted:#506779;--line:#dce5ed;--white:#fff;--bad:#9f343d;--good:#126544;--shadow:0 15px 50px rgba(10,48,77,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font:16px/1.58 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text)}
+    button,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}button:focus-visible,select:focus-visible{outline:3px solid #db991a;outline-offset:3px}
+    .shell{max-width:940px;margin:auto;padding:0 18px}.hero{color:#fff;background:linear-gradient(125deg,#0d304d 0%,#124c69 58%,#0b756f 100%);padding:30px 0 46px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:450px;height:450px;right:-180px;top:-250px;border:72px solid rgba(255,255,255,.06);border-radius:50%;pointer-events:none}
+    .eyebrow{text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:.16em;color:#bcebe2;margin:0 0 10px}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.13;max-width:740px;letter-spacing:-.045em;margin:0 0 13px}.hero p.intro{max-width:690px;color:#e0eef4;margin:0;font-size:17px}
+    .hero-badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.hero-badges span{font-size:13px;font-weight:650;border:1px solid #ffffff4a;background:#ffffff12;padding:5px 12px;border-radius:50px}
+    main{margin-top:-20px;position:relative;padding-bottom:55px}.nav{display:flex;gap:8px;background:#fff;padding:9px;box-shadow:var(--shadow);border:1px solid var(--line);border-radius:16px;margin-bottom:18px}.tab{flex:1;border:0;background:transparent;color:var(--muted);padding:12px 10px;font-weight:750;border-radius:11px}.tab[aria-selected="true"]{background:var(--navy);color:#fff}.tab:hover:not([aria-selected="true"]){background:#edf4f7}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,4vw,32px);box-shadow:var(--shadow)}.panel+.panel{margin-top:16px}.panel h2,.panel h3{line-height:1.25;letter-spacing:-.02em}.panel h2{font-size:clamp(22px,3.6vw,30px);margin:0 0 10px}.panel h3{margin:0 0 10px;font-size:19px}.subtle{color:var(--muted)}.lead{font-size:16px;margin-top:0}.hidden,[hidden]{display:none!important}
+    .configure{display:grid;grid-template-columns:1fr 1fr;gap:20px}.field-title{font-weight:750;margin:0 0 8px;display:block}.pill-grid{display:flex;gap:8px;flex-wrap:wrap}.choice-pill{border:1.5px solid #cddce5;background:#fff;border-radius:11px;padding:10px 14px;font-weight:700;color:#274357}.choice-pill[aria-pressed="true"]{background:#e3f6f0;color:#075c55;border-color:#0d8c79;box-shadow:0 0 0 1px #0d8c79}.choice-pill:hover{border-color:#0a8378}.small-note{font-size:13px;color:var(--muted);margin:8px 0 0}
+    select{width:100%;border:1.5px solid #cbdce7;border-radius:11px;background:#fff;padding:12px;color:var(--text)}.action-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:24px}.btn{border:1.5px solid transparent;border-radius:11px;padding:12px 19px;font-weight:800;line-height:1.25;min-height:47px}.btn-primary{background:var(--teal);color:white}.btn-primary:hover{background:#056c67}.btn-secondary{background:#fff;border-color:#b5c9d6;color:var(--navy)}.btn-secondary:hover{background:#f0f7fa}.btn-small{min-height:36px;padding:8px 12px;font-size:14px}.tip{border-left:4px solid #ebb75b;background:#fff9ed;padding:12px 16px;border-radius:0 11px 11px 0;color:#574a30;font-size:14px}
+    .question-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.pill{border-radius:40px;padding:5px 11px;background:#e9f0f5;font-weight:750;color:#3c566b;font-size:13px}.progress-track{height:11px;border-radius:20px;background:#e1eaf0;overflow:hidden;margin:14px 0 25px}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#14a79b,#5ac8ad);transition:width .25s}.quiz-question{font-size:clamp(21px,3.4vw,28px);line-height:1.35;margin:0 0 24px}.option-list{display:grid;gap:11px}.answer-option{display:flex;text-align:left;align-items:center;gap:13px;width:100%;padding:14px 15px;border:1.5px solid #ccdae3;border-radius:12px;background:#fff;color:#263f50;font-weight:600;min-height:62px}.answer-option:hover:not(:disabled){border-color:#438a9b;background:#f6fbfc}.answer-option:disabled{opacity:1;cursor:default}.letter{flex:0 0 32px;height:32px;display:grid;place-items:center;border-radius:9px;background:#eff3f6;color:#4a6374;font-weight:850}.answer-option.selected{border-color:var(--teal);background:#eaf8f3}.answer-option.selected .letter{background:var(--teal);color:#fff}.answer-option.correct{border-color:#259970;background:#edfaf3}.answer-option.wrong{border-color:#ba5960;background:#fff1f1}.answer-option.correct .letter{background:#21865f;color:#fff}.answer-option.wrong .letter{background:#b14852;color:#fff}.hint-box{margin-top:15px}.hint-box button{background:none;border:0;color:#0a716b;font-size:14px;font-weight:750;padding:5px 0}.hint-text{background:#ecf7f8;border-radius:9px;padding:10px 14px;font-size:14px;margin-top:5px}
+    .feedback{margin-top:18px;padding:14px 17px;background:#f1f7fa;border-radius:11px;border-left:4px solid var(--teal)}.feedback.is-wrong{border-color:#bc6065;background:#fcf3f2}.feedback strong{display:block;font-size:17px;margin-bottom:4px}.feedback p{margin:0}.footer-action{margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:10px}.footer-action .subtle{font-size:13px}
+    .result-head{text-align:center}.big-score{font-size:clamp(52px,9vw,82px);font-weight:900;letter-spacing:-.07em;line-height:1.1;color:var(--navy)}.big-score small{font-size:23px;letter-spacing:0;color:var(--muted)}.result-msg{font-size:18px;font-weight:700}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:25px 0}.stat{text-align:center;background:#f1f7f9;padding:15px;border-radius:13px}.stat .value{font-size:27px;font-weight:850;color:var(--navy)}.stat .label{font-size:13px;color:var(--muted)}.review-list{display:grid;gap:12px;margin-top:15px}.review-item{border:1px solid var(--line);border-radius:11px;padding:14px 16px}.review-item .qtitle{font-weight:800}.review-item p{font-size:14px;margin:7px 0 0}.review-tag{display:inline-block;font-size:12px;font-weight:800;border-radius:50px;background:#e8f4eb;color:var(--good);padding:2px 9px;margin-left:7px}.review-tag.missed{background:#ffedef;color:var(--bad)}
+    .lessons{display:grid;grid-template-columns:1fr 1fr;gap:13px}.lesson{border:1px solid var(--line);border-radius:13px;background:#fff;padding:18px}.lesson-number{font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}.lesson h3{font-size:18px;margin:6px 0 8px}.lesson p{font-size:15px;margin:0;color:#425a6b}.lesson .example{margin-top:10px;font-size:14px;background:#f0f6f8;padding:10px;border-radius:9px}
+    .experiments{display:grid;grid-template-columns:1fr 1fr;gap:16px}.experiment{padding:20px;background:#f8fbfc;border:1px solid var(--line);border-radius:14px}.experiment h3{margin:0 0 5px}.experiment p{margin:6px 0 12px}.diagram{width:100%;height:auto;display:block;margin:10px auto 0}.circuit-lamp{transition:fill .2s,filter .2s}.circuit-lamp.on{fill:#ffd46a;filter:drop-shadow(0 0 12px #ffcd45)}.status{font-weight:750;color:var(--navy);font-size:14px}.experiment .action-row{margin-top:10px}.charge-row{display:flex;justify-content:center;align-items:center;gap:25px;min-height:120px}.charge{width:65px;height:65px;border-radius:50%;display:grid;place-items:center;font-size:34px;font-weight:700;color:white;box-shadow:0 7px 18px #0c39531c}.charge.plus{background:#ca5d5a}.charge.minus{background:#468bba}.charge-arrow{font-size:32px;font-weight:850;color:#337d75}.charge-description{text-align:center;font-weight:750;min-height:30px}
+    .site-footer{text-align:center;color:#607485;padding:10px 0 35px;font-size:13px}.site-footer a{color:#0f656b}
+    @media(max-width:640px){.hero{padding-top:25px}.configure,.lessons,.experiments{grid-template-columns:1fr}.panel{padding:20px}.nav{gap:3px;padding:6px}.tab{padding:11px 3px;font-size:13px}.hero h1{font-size:32px}.pill-grid .choice-pill{padding:9px 11px}.result-grid{gap:6px}.stat{padding:10px 5px}.stat .value{font-size:22px}.option-list{gap:9px}.answer-option{padding:12px;min-height:56px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+    @media print{.hero,.nav,.action-row,.hint-box,.site-footer{display:none!important}body{background:white}.panel{box-shadow:none;border:0}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="shell">
+      <p class="eyebrow">Naturfag • 7. trinn</p>
+      <h1>Energi og elektrisitet</h1>
+      <p class="intro">En øveprøve med enkle spørsmål og korte forklaringer, laget ut fra temaene i oppgave 1–20 i <em>Refleks 7</em>, side 58–59.</p>
+      <div class="hero-badges"><span>40 flervalgsspørsmål</span><span>Øving eller prøve</span><span>Fasit med forklaringer</span></div>
+    </div>
+  </header>
+  <main class="shell">
+    <nav class="nav" aria-label="Velg del av nettsiden" role="tablist">
+      <button class="tab" data-tab="quiz" role="tab" aria-selected="true" aria-controls="view-quiz">📝 Øveprøve</button>
+      <button class="tab" data-tab="learn" role="tab" aria-selected="false" aria-controls="view-learn">📖 Lær først</button>
+      <button class="tab" data-tab="try" role="tab" aria-selected="false" aria-controls="view-try">💡 Prøv selv</button>
+    </nav>
+
+    <section id="view-quiz" role="tabpanel">
+      <div class="panel" id="setup">
+        <h2>Lag din egen øveprøve</h2>
+        <p class="lead subtle">Du kan prøve flere ganger. Spørsmålene og svarrekkefølgen blandes hver gang.</p>
+        <div class="configure">
+          <div>
+            <span class="field-title">1. Hvordan vil du øve?</span>
+            <div class="pill-grid" id="mode-choices">
+              <button class="choice-pill" data-mode="practice" aria-pressed="true">Øvemodus</button>
+              <button class="choice-pill" data-mode="test" aria-pressed="false">Prøvemodus</button>
+            </div>
+            <p class="small-note" id="mode-description">Du får vite riktig svar og en forklaring etter hvert spørsmål.</p>
+          </div>
+          <div>
+            <label for="topic" class="field-title">2. Hva vil du øve på?</label>
+            <select id="topic">
+              <option value="all">Hele kapittelet (alle temaer)</option>
+              <option value="energi">Energi og energiomdanning</option>
+              <option value="ladning">Elektriske ladninger</option>
+              <option value="krets">Strøm, kretser og materialer</option>
+              <option value="kraft">Kraftverk, høyspent og lyn</option>
+            </select>
+          </div>
+          <div>
+            <span class="field-title">3. Hvor mange spørsmål?</span>
+            <div class="pill-grid" id="count-choices">
+              <button class="choice-pill" data-count="10" aria-pressed="false">10</button>
+              <button class="choice-pill" data-count="20" aria-pressed="true">20</button>
+              <button class="choice-pill" data-count="40" aria-pressed="false">Alle 40</button>
+            </div>
+            <p class="small-note" id="count-help">Velger du ett tema, får du alle spørsmålene om dette temaet dersom det er færre.</p>
+          </div>
+          <div>
+            <span class="field-title">Ditt beste resultat</span>
+            <div class="stat" style="text-align:left;max-width:260px"><span class="value" id="best-score">–</span><div class="label">Beste prosentpoeng på denne øveprøven</div></div>
+            <p class="small-note">Resultatet lagres bare i nettleseren på denne enheten.</p>
+          </div>
+        </div>
+        <div class="action-row"><button id="start" class="btn btn-primary">Start øveprøven →</button></div>
+        <p class="tip" style="margin-top:24px">Tips: Begynn med <strong>10 spørsmål i øvemodus</strong>. Les forklaringene før du prøver prøvemodus.</p>
+      </div>
+
+      <div class="panel hidden" id="quiz-card">
+        <div class="question-top"><span class="pill" id="question-number">Spørsmål 1 av 20</span><span class="pill" id="quiz-mode">Øvemodus</span></div>
+        <div class="progress-track" role="progressbar" id="progress" aria-label="Fremgang" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar" id="progress-bar"></div></div>
+        <p class="eyebrow" id="question-topic" style="color:var(--teal)">Energi</p>
+        <h2 class="quiz-question" id="question-text"></h2>
+        <div class="option-list" id="options" role="group" aria-label="Svaralternativer"></div>
+        <div class="hint-box" id="hint-box"><button type="button" id="hint-toggle" aria-expanded="false">💭 Trenger du et lite hint?</button><div class="hint-text hidden" id="hint-text"></div></div>
+        <div id="feedback" class="feedback hidden" role="status" aria-live="polite"></div>
+        <div class="footer-action"><button class="btn btn-secondary btn-small" id="quit">Avslutt økten</button><button class="btn btn-primary" id="next" disabled>Neste spørsmål →</button></div>
+      </div>
+
+      <div class="panel hidden" id="results">
+        <div class="result-head"><p class="eyebrow" style="color:var(--teal)">Ferdig!</p><h2>Her er resultatet ditt</h2><div class="big-score" id="total-score">0 <small>av 20</small></div><p class="result-msg" id="result-msg"></p></div>
+        <div class="result-grid"><div class="stat"><div class="value" id="percent">0 %</div><div class="label">Riktige svar</div></div><div class="stat"><div class="value" id="correct-count">0</div><div class="label">Riktige</div></div><div class="stat"><div class="value" id="wrong-count">0</div><div class="label">Å øve mer på</div></div></div>
+        <div class="action-row"><button class="btn btn-primary" id="retry">Ny tilfeldig prøve</button><button class="btn btn-secondary" id="retry-wrong">Øv på feilene mine</button><button class="btn btn-secondary" id="go-setup">Endre innstillinger</button></div>
+        <h3 style="margin-top:30px">Gjennomgå svarene</h3><p class="subtle" id="review-info"></p><div class="action-row" style="margin:10px 0 16px"><button id="toggle-review" class="btn btn-secondary btn-small">Vis også riktige svar</button></div><div class="review-list" id="review-list"></div>
+      </div>
+    </section>
+
+    <section id="view-learn" role="tabpanel" class="hidden">
+      <div class="panel">
+        <h2>Åtte ting som er fine å kunne</h2>
+        <p class="lead subtle">Les litt, prøv noen spørsmål, og kom tilbake hit hvis noe er vanskelig.</p>
+        <div class="lessons">
+          <article class="lesson"><div class="lesson-number">Huskeregel 1</div><h3>Energi kan ikke forsvinne</h3><p>Energi kan ikke skapes eller forsvinne. Den kan bare bli til en annen energiform.</p><div class="example">⚽ Mat → bevegelse i kroppen → bevegelse i ballen → blant annet lyd og varme.</div></article>
+          <article class="lesson"><div class="lesson-number">Huskeregel 2</div><h3>Lagret energi og bevegelse</h3><p>En ball som ligger høyt oppe, har potensiell energi. Når ballen faller, blir mye av den til bevegelsesenergi.</p><div class="example">🎢 På toppen: mye potensiell energi. På vei ned: økende bevegelsesenergi.</div></article>
+          <article class="lesson"><div class="lesson-number">Huskeregel 3</div><h3>Pluss og minus</h3><p>Like elektriske ladninger frastøter hverandre. Ulike ladninger tiltrekker hverandre.</p><div class="example">+ og + skyver fra hverandre. + og − trekkes sammen.</div></article>
+          <article class="lesson"><div class="lesson-number">Huskeregel 4</div><h3>En lukket krets</h3><p>Strøm må ha en sammenhengende vei å gå gjennom. En bryter kan åpne eller lukke kretsen.</p><div class="example">🔦 Lukket bryter → pæra lyser. Åpen bryter → pæra slukker.</div></article>
+          <article class="lesson"><div class="lesson-number">Huskeregel 5</div><h3>Motstand</h3><p>Ved samme spenning gir større motstand mindre strøm. Mindre motstand gir mer strøm.</p><div class="example">🚰 Tenk på vann i et trangt rør: Det er vanskeligere å komme gjennom.</div></article>
+          <article class="lesson"><div class="lesson-number">Huskeregel 6</div><h3>Ledere og isolatorer</h3><p>Metaller som kobber leder strøm godt. Plast og gummi leder strøm dårlig og kalles isolatorer.</p><div class="example">🔌 Metall er inni ledningen. Plast beskytter utenpå.</div></article>
+          <article class="lesson"><div class="lesson-number">Huskeregel 7</div><h3>Slik lager vi elektrisk energi</h3><p>I et vannkraftverk eller en vindmølle driver vann eller vind en generator. I et kullkraftverk driver damp en turbin og generator.</p><div class="example">💧 Vannkraft er den klart største kilden til strømproduksjon i Norge.</div></article>
+          <article class="lesson"><div class="lesson-number">Huskeregel 8</div><h3>Respekt for lyn og høyspent</h3><p>Høyspent kan være livsfarlig. Metallkarosseriet i en vanlig lukket bil beskytter mot lyn, men gummistøvler gjør det ikke.</p><div class="example">⚡ Hold god avstand til høyspentledninger. Søk trygg bygning eller lukket bil ved tordenvær.</div></article>
+        </div>
+        <div class="action-row"><button class="btn btn-primary" data-to-quiz>Gå til øveprøven →</button></div>
+      </div>
+    </section>
+
+    <section id="view-try" role="tabpanel" class="hidden">
+      <div class="panel"><h2>Prøv deg frem</h2><p class="lead subtle">Små, trygge modeller som viser hvordan elektrisitet virker. Dette er bare illustrasjoner på skjermen – ikke forsøk med ekte strøm.</p>
+        <div class="experiments">
+          <div class="experiment"><h3>1. Åpne og lukk kretsen</h3><p>Hva skjer med pæra når du trykker på bryteren?</p>
+            <svg class="diagram" viewBox="0 0 330 205" role="img" aria-label="En enkel elektrisk krets med batteri, bryter og lyspære">
+              <path d="M65 62H130 M200 62H260V155H185 M135 155H65V62" stroke="#294e65" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <g><circle class="circuit-lamp" id="lamp" cx="165" cy="62" r="33" fill="#dce7ed" stroke="#244b63" stroke-width="3"/><path d="M148 45l34 34m0-34l-34 34" stroke="#30566c" stroke-width="3"/><text x="165" y="12" text-anchor="middle" fill="#38586b" font-size="14">Lyspære</text></g>
+              <path d="M52 111h27M58 121h15" stroke="#294e65" stroke-width="4"/><text x="14" y="150" fill="#38586b" font-size="14">Batteri</text>
+              <circle cx="135" cy="155" r="5" fill="#294e65"/><circle cx="185" cy="155" r="5" fill="#294e65"/><line id="switch-line" x1="135" y1="155" x2="177" y2="126" stroke="#d17e3c" stroke-width="6" stroke-linecap="round"/>
+              <text x="165" y="191" text-anchor="middle" fill="#38586b" font-size="14">Bryter</text>
+            </svg>
+            <div class="action-row"><button id="switch-button" class="btn btn-primary btn-small">Lukk bryteren</button></div><p id="circuit-status" class="status" role="status">Bryteren er åpen. Pæra er av.</p>
+          </div>
+          <div class="experiment"><h3>2. Pluss og minus</h3><p>Hvordan virker to elektriske ladninger på hverandre?</p>
+            <div class="charge-row" aria-label="To elektriske ladninger"><div class="charge plus" id="charge-a">+</div><div class="charge-arrow" id="charge-arrow">← →</div><div class="charge plus" id="charge-b">+</div></div>
+            <div class="charge-description" id="charge-description" role="status">To like ladninger frastøter hverandre.</div>
+            <div class="action-row"><button class="btn btn-secondary btn-small" id="same-charge">+ og +</button><button class="btn btn-secondary btn-small" id="different-charge">+ og −</button><button class="btn btn-secondary btn-small" id="negative-charge">− og −</button></div>
+          </div>
+        </div><div class="action-row"><button class="btn btn-primary" data-to-quiz>Prøv spørsmålene →</button></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer shell">Laget for å øve på naturfag på 7. trinn. Ingen konto, annonser eller innsamling av personopplysninger.</footer>
+<script>
+"use strict";
+const BANK = [
+  // ENERGI: 10 spørsmål
+  {t:"energi",q:"Hva skjer med energi når du sparker en fotball?",o:["Energi fra kroppen blir blant annet til bevegelse i ballen.","Det blir laget helt ny energi i skoen.","All energien forsvinner med en gang.","Ballen får bare varmeenergi og ingen bevegelse."],a:0,h:"Tenk på hvor kroppen får energien sin fra.",e:"Kroppen får energi fra maten. Når du sparker, overføres noe av energien til bevegelse i ballen."},
+  {t:"energi",q:"Hva er et eksempel på energiomdanning når en ball treffer bakken og stopper?",o:["Bevegelsesenergi blir blant annet til lyd og varme.","Energien blir borte for alltid.","Varme blir alltid til sollys.","Ballen lager elektrisk energi i lufta."],a:0,h:"Tenk på lyden du hører når ballen treffer bakken.",e:"Når ballen stopper, omdannes bevegelsesenergi blant annet til varme, lyd og små bevegelser i underlaget."},
+  {t:"energi",q:"Hva sier energibevaringsloven?",o:["Energi kan ikke skapes eller forsvinne, bare omdannes.","Energi forsvinner når vi slår av lyset.","Vi lager ny energi hver gang vi løper.","Energi finnes bare når noe beveger seg."],a:0,h:"Tenk på hva som skjer med energien når en bil bremser.",e:"Energi kan gå fra én form til en annen, for eksempel fra bevegelse til varme."},
+  {t:"energi",q:"Hva lager solceller av sollys?",o:["Elektrisk energi","Kull","Bensin","Vind"],a:0,h:"Tenk på hva en solcelle på et hustak brukes til.",e:"Solceller omdanner energi i sollys til elektrisk energi."},
+  {t:"energi",q:"Hvordan bruker planter energi fra sola?",o:["Til å lage næring gjennom fotosyntese.","Til å lage elektrisk strøm i røttene.","Til å bli magneter.","Til å stanse all fordamping."],a:0,h:"Planter trenger lys for å kunne vokse.",e:"Gjennom fotosyntesen bruker planter solenergi til å lage energirik næring."},
+  {t:"energi",q:"Hvilke energiformer får vi fra en lyspære som er på?",o:["Lys og varme","Bare bevegelse","Bare lyd","Bare potensiell energi"],a:0,h:"Hold hånden i nærheten av en gammel lyspære, uten å ta på den. Hva merker du?",e:"En lyspære omdanner elektrisk energi til lys og også noe varme."},
+  {t:"energi",q:"Hva omdanner en elektrisk vifte elektrisk energi til?",o:["Bevegelse i viftebladene, og noe lyd og varme","Bare lys","Bare potensiell energi","Bare kjemisk energi"],a:0,h:"Hva gjør viftebladene når vifta starter?",e:"Motoren får viftebladene til å snurre. Litt energi blir også til lyd og varme."},
+  {t:"energi",q:"Hvor får en bensinbil energien til å kjøre fra?",o:["Kjemisk energi lagret i bensinen","Bare fra dekkene","Bare fra vinduet","Fra veimerking"],a:0,h:"Tenk på hva du fyller på tanken.",e:"Bensin inneholder kjemisk energi. Motoren omdanner den blant annet til bevegelse og varme."},
+  {t:"energi",q:"Hvorfor kan Emma bli kald etter at hun har syklet og satt seg stille?",o:["Hun lager mindre varme og gir fra seg varme til omgivelsene.","All varmeenergien hennes er blitt borte.","Syklingen har fjernet all energien i kroppen.","Det finnes ikke varmeenergi i et klasserom."],a:0,h:"Kroppen avgir varme til lufta omkring oss.",e:"Når Emma slutter å sykle, produserer musklene mindre varme. Kroppen fortsetter å avgi varme til lufta."},
+  {t:"energi",q:"Hvilken type energi har en ball på en høy hylle på grunn av høyden?",o:["Potensiell energi","Lydenergi","Elektrisk strøm","Magnetisk pol"],a:0,h:"Hva kan skje hvis ballen faller ned?",e:"Ballen har potensiell energi på grunn av plasseringen sin. Når den faller, blir den omdannet til bevegelsesenergi."},
+  // LADNINGER: 10 spørsmål
+  {t:"ladning",q:"Hva skjer når en positiv og en negativ elektrisk ladning kommer nær hverandre?",o:["De tiltrekker hverandre.","De frastøter hverandre.","Begge ladningene forsvinner.","De blir til lys."],a:0,h:"Husk at motsatte ladninger oppfører seg annerledes enn like.",e:"Ulike elektriske ladninger, pluss og minus, tiltrekker hverandre."},
+  {t:"ladning",q:"Hva skjer når to positive ladninger kommer nær hverandre?",o:["De frastøter hverandre.","De tiltrekker hverandre.","De blir elektrisk nøytrale med en gang.","De blir til to magneter."],a:0,h:"Tenk på regelen om like og ulike ladninger.",e:"To ladninger med samme fortegn frastøter hverandre."},
+  {t:"ladning",q:"Hva skjer når to negative ladninger kommer nær hverandre?",o:["De frastøter hverandre.","De tiltrekker hverandre.","De lager en lukket krets.","De blir til varme."],a:0,h:"Gjelder regelen om like ladninger også for minus?",e:"Negative ladninger er like ladninger og frastøter hverandre."},
+  {t:"ladning",q:"En partikkel er negativt ladet. Hva må en annen partikkel være for at de skal frastøte hverandre?",o:["Negativt ladet","Positivt ladet","Elektrisk nøytral","Ladningen spiller ingen rolle"],a:0,h:"Tenk på hva som skjer med to ladninger som er like.",e:"To negative ladninger frastøter hverandre, akkurat som to positive ladninger gjør."},
+  {t:"ladning",q:"Hvordan ligner magneter og elektriske ladninger på hverandre?",o:["Begge kan både tiltrekke og frastøte.","Begge må være koblet til et batteri.","Begge lager alltid synlig lys.","Begge virker bare i vann."],a:0,h:"Hva skjer når du holder to magnetpoler mot hverandre?",e:"Både magnetpoler og elektriske ladninger kan tiltrekke eller frastøte, avhengig av hvilke som møtes."},
+  {t:"ladning",q:"Hva skjer hvis du holder to like magnetpoler mot hverandre?",o:["De frastøter hverandre.","De tiltrekker hverandre.","De blir elektriske ledninger.","De mister straks all magnetisme."],a:0,h:"Tenk på to nordpoler eller to sørpoler.",e:"Like magnetpoler, nord–nord eller sør–sør, frastøter hverandre."},
+  {t:"ladning",q:"Hvorfor kan du få et lite støt når du tar på en bildør?",o:["Statisk elektrisitet kan gi en liten elektrisk utladning.","Bilen produserer alltid lyn når du åpner døra.","Varmen i hånden blir til bensin.","Vindusglasset lager en magnet."],a:0,h:"Tenk på hva som kan skje når elektriske ladninger har samlet seg opp.",e:"Statisk elektrisitet kan bygge seg opp. Når du tar på metall, kan ladninger flytte seg raskt, og du kjenner et lite støt."},
+  {t:"ladning",q:"Hvorfor kan en ballong feste seg til en vegg etter at du har gnidd den mot håret?",o:["Elektriske ladninger gjør at ballongen kan tiltrekkes av veggen.","Ballongen får plutselig lim på seg.","Veggen begynner å produsere vind.","All lufta forsvinner fra ballongen."],a:0,h:"Dette er et eksempel på statisk elektrisitet.",e:"Når ballongen gnis, kan den få elektrisk ladning og tiltrekkes av veggen på grunn av forskyvning av ladninger i veggen."},
+  {t:"ladning",q:"Hvilken elektrisk ladning har et elektron?",o:["Negativ","Positiv","Både positiv og negativ samtidig","Ingen, fordi elektroner er lys"],a:0,h:"Atomer har blant annet protoner og elektroner.",e:"Elektroner har negativ ladning. Protoner har positiv ladning."},
+  {t:"ladning",q:"Hva mener vi med elektrisk strøm i en metallledning?",o:["Elektriske ladninger som beveger seg gjennom ledningen.","Elektriske ladninger som alltid står helt stille.","Varme som bare går gjennom plast.","En magnet som snurrer rundt ledningen."],a:0,h:"Tenk på hva ordet «strømmer» betyr.",e:"I en metallledning er elektrisk strøm knyttet til at elektroner beveger seg gjennom metallet."},
+  // KRETSER OG MATERIALER: 12 spørsmål
+  {t:"krets",q:"Hva er en elektrisk krets?",o:["En vei som elektrisk strøm kan gå gjennom.","En samling av magneter uten ledninger.","Et sted hvor energi forsvinner.","En gjenstand som alltid lager vind."],a:0,h:"Tenk på hva som binder et batteri og en lyspære sammen.",e:"En elektrisk krets er en forbindelse mellom elektriske deler. For at strøm skal gå, må det være en lukket vei."},
+  {t:"krets",q:"Hva skjer med lyspæra når du lukker bryteren i en enkel krets med batteri?",o:["Kretsen blir sluttet, og pæra kan lyse.","Kretsen brytes, og pæra slukker.","Batteriet forsvinner.","Ledningen blir til plast."],a:0,h:"Se for deg en vei med en bro som kan åpnes og lukkes.",e:"Når bryteren lukkes, blir kretsen sammenhengende. Da kan strøm gå og pæra lyse."},
+  {t:"krets",q:"Hva skjer når bryteren åpnes i en enkel krets med lyspære?",o:["Strømmen stopper, og pæra slukker.","Strømmen blir dobbelt så sterk.","Pæra får mer elektrisk energi.","Ledningen lager strøm selv."],a:0,h:"Strøm trenger en sammenhengende vei.",e:"En åpen bryter bryter kretsen. Da går det ikke strøm gjennom pæra."},
+  {t:"krets",q:"Hva er oppgaven til batteriet i en enkel elektrisk krets?",o:["Å sørge for spenning som kan drive strømmen.","Å gjøre plast om til metall.","Å stanse all bevegelse av ladninger.","Å holde bryteren åpen hele tiden."],a:0,h:"Tenk på hvorfor lommelykten trenger batterier.",e:"Batteriet gir en spenningsforskjell som kan få elektriske ladninger til å bevege seg i en lukket krets."},
+  {t:"krets",q:"Hvilket materiale er vanligvis en god elektrisk leder?",o:["Kobber","Gummi","Tørr plast","Glass"],a:0,h:"Tenk på metallet inni en vanlig elektrisk ledning.",e:"Kobber er et metall som leder elektrisk strøm godt."},
+  {t:"krets",q:"Hvilket materiale er vanligvis en elektrisk isolator?",o:["Gummi","Aluminium","Kobber","Jern"],a:0,h:"En isolator gjør det vanskelig for strøm å passere.",e:"Gummi leder vanligvis elektrisk strøm dårlig. Derfor brukes isolerende materialer rundt ledninger."},
+  {t:"krets",q:"Hvorfor er det ofte plast rundt metalltrådene i elektriske ledninger?",o:["Plasten isolerer og reduserer risikoen for å komme borti strømførende metall.","Plasten gjør at strømmen går raskere gjennom lufta.","Plasten brukes for å lage magnetiske poler.","Plasten øker alltid batteriets energi."],a:0,h:"Tenk på forskjellen mellom ledere og isolatorer.",e:"Metallet leder strøm inni kabelen, mens plasten utenpå isolerer og beskytter mot berøring."},
+  {t:"krets",q:"Hva skjer med strømmen når motstanden øker og spenningen er den samme?",o:["Strømmen blir mindre.","Strømmen blir større.","Strømmen blir alltid uendret.","Motstanden blir automatisk borte."],a:0,h:"Se for deg at vann må gjennom et stadig trangere rør.",e:"Ved samme spenning gir større elektrisk motstand mindre strøm."},
+  {t:"krets",q:"Hva skjer med strømmen når motstanden minker og spenningen er den samme?",o:["Strømmen blir større.","Strømmen blir mindre.","Strømmen blir alltid null.","Batteriet slutter å gi spenning."],a:0,h:"Hva skjer med vannet hvis et trangt rør blir videre?",e:"Ved samme spenning gir mindre motstand større strøm."},
+  {t:"krets",q:"Hvorfor blir en fugl vanligvis ikke skadet når den sitter på bare én høyspentledning?",o:["Det er nesten ingen spenningsforskjell mellom føttene.","Fugler er alltid laget av isolerende gummi.","Høyspentledninger har aldri strøm.","Fjærene lager elektrisitet som stopper ledningen."],a:0,h:"Tenk på at begge føttene er i kontakt med samme ledning.",e:"Begge føttene er nesten på samme elektriske spenning. Derfor går svært lite strøm gjennom fuglen. Å berøre en annen ledning eller jord kan være dødelig."},
+  {t:"krets",q:"Hva skjer i en enkel batterikrets hvis en ledning løsner fra lyspæra?",o:["Kretsen brytes, og pæra slukker.","Batteriet får mer energi av seg selv.","Pæra lyser sterkere uten strøm.","Motstanden blir til magnetisme."],a:0,h:"Se for deg en vei der det mangler et stykke.",e:"Når ledningen løsner, er ikke kretsen lenger lukket. Da stopper strømmen gjennom pæra."},
+  {t:"krets",q:"Hvilken påstand om motstand er riktig, når spenningen ikke endrer seg?",o:["Større motstand gir mindre strøm.","Større motstand gir mer strøm.","Motstand har aldri noe med strøm å gjøre.","Mindre motstand gjør at all energi forsvinner."],a:0,h:"Tenk på hva som gjør det lett eller vanskelig for strøm å gå.",e:"Dette følger av sammenhengen mellom spenning, strøm og motstand: Større motstand betyr mindre strøm når spenningen er den samme."},
+  // KRAFTVERK OG SIKKERHET: 8 spørsmål
+  {t:"kraft",q:"Hvilken energikilde lager mest elektrisk energi i Norge?",o:["Vannkraft","Kullkraft","Solkraft","Olje"],a:0,h:"Norge har mange elver, fosser og høye fjell.",e:"Vannkraft står for klart mesteparten av strømproduksjonen i Norge."},
+  {t:"kraft",q:"Hvordan lager et vannkraftverk elektrisk energi?",o:["Vann driver en turbin og en generator.","Vann blir til bensin som brennes.","Vannet gjør alle ledninger magnetiske.","Elektrisk energi lages uten noen bevegelse."],a:0,h:"Tenk på et vannhjul som blir drevet av vann.",e:"Vann i bevegelse driver en turbin, som får en generator til å produsere elektrisk energi."},
+  {t:"kraft",q:"Hvordan virker en vindturbin?",o:["Vinden snurrer rotorbladene som driver en generator.","Vinden blir direkte omgjort til kull.","Rotorbladene lager vann fra lufta.","Vindkraft trenger aldri bevegelse."],a:0,h:"Tenk på hva som får de store vingene til å snurre.",e:"Vind får rotorbladene til å snurre. En generator gjør bevegelsesenergien om til elektrisk energi."},
+  {t:"kraft",q:"Hva driver turbinen i et vanlig kullkraftverk?",o:["Damp som lages når vann varmes opp.","Et stort batteri som bare gir lys.","Magnetiske ladninger i kullstøv.","Sollys som treffer kullhaugen."],a:0,h:"Kullet brennes for å produsere varme.",e:"Når kull brennes, brukes varmen til å lage damp. Dampen driver en turbin og generator."},
+  {t:"kraft",q:"Hvorfor kan høyspentkabler være livsfarlige?",o:["Svært høy spenning kan drive farlig strøm gjennom kroppen, også ved overslag.","Fordi ledningene alltid er for varme til å sees.","Fordi strøm ikke kan bevege seg i metall.","Fordi alle kabler inneholder giftig gass."],a:0,h:"Tenk på hva høy elektrisk spenning kan føre til.",e:"Høy spenning kan gi alvorlig strømgjennomgang, også uten direkte berøring når strøm slår gjennom lufta. Hold god avstand."},
+  {t:"kraft",q:"Hva er en viktig sikkerhetsregel når fagfolk arbeider på høyspentanlegg?",o:["De følger strenge prosedyrer og kobler vanligvis ut og sikrer anlegget før arbeidet.","De kan alltid berøre ledningene med bare hender.","De bruker vanlig regnjakke som eneste beskyttelse.","De trenger ikke kontrollere om anlegget er spenningsløst."],a:0,h:"Tenk på hva fagfolk gjør før de starter farlig arbeid.",e:"Bare kvalifiserte fagfolk skal arbeide på slike anlegg. De bruker sikkerhetsprosedyrer, kontroll og riktig utstyr."},
+  {t:"kraft",q:"Hvorfor er en vanlig lukket bil med metallkarosseri et relativt trygt sted ved lyn?",o:["Metallet leder strømmen rundt dem som sitter inni bilen.","Gummidekkene stopper alltid all lynstrøm.","Bilsetene produserer motsatt lyn.","Motoren suger lynet ut av lufta."],a:0,h:"Tenk på hva som omgir dem som sitter inne i bilen.",e:"Metallkarosseriet leder lynstrømmen rundt kupeen og gir beskyttelse. Ikke ta på metalldeler, og hold vinduene lukket."},
+  {t:"kraft",q:"Beskytter vanlige gummistøvler deg mot et direkte lynnedslag?",o:["Nei, lynet har så høy spenning at støvlene ikke gir slik beskyttelse.","Ja, all gummi stopper lyn uansett styrke.","Ja, men bare hvis støvlene er røde.","Ja, fordi lyn alltid stopper i bakken før det treffer mennesker."],a:0,h:"Tenk på hvor kraftig et lyn kan være.",e:"Vanlige gummistøvler beskytter ikke mot lynnedslag. Gå inn i et trygt bygg eller en lukket bil hvis det tordner."}
+];
+const TITLES={energi:"Energi og energiomdanning",ladning:"Elektriske ladninger",krets:"Strøm, kretser og materialer",kraft:"Kraftverk, høyspent og lyn"};
+const $=id=>document.getElementById(id);
+const randomize=a=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;};
+const escapeHTML=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+let mode="practice",desiredCount=20,session=[],current=0,answers=[],revealed=false,showAllReview=false,activeTab="quiz";
+const bestKey="refleks7_bokoppgaver_best_2026";
+function showTab(tab){
+  activeTab=tab;
+  document.querySelectorAll(".tab").forEach(b=>{const on=b.dataset.tab===tab;b.setAttribute("aria-selected",String(on));b.tabIndex=on?0:-1;});
+  for(const k of ["quiz","learn","try"])$("view-"+k).classList.toggle("hidden",k!==tab);
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function showStage(stage){for(const key of ["setup","quiz-card","results"])$(key).classList.toggle("hidden",key!==stage);}
+function updateBest(){let value=null;try{value=localStorage.getItem(bestKey)}catch(e){}$("best-score").textContent=value?value+" %":"–";}
+function setPills(parent,attribute,value){document.querySelectorAll(`#${parent} [${attribute}]`).forEach(b=>b.setAttribute("aria-pressed",String(b.dataset[attribute.slice(5)]===String(value))));}
+function normalizeCount(){const available=BANK.filter(q=>$("topic").value==="all"||q.t===$("topic").value).length;$("count-help").textContent=available<desiredCount?`Dette temaet har ${available} spørsmål. Alle ${available} tas med.`:"Spørsmålene trekkes tilfeldig fra temaet du har valgt.";}
+function prepare(items){
+  return randomize(items).map(q=>{const opts=randomize(q.o.map((label,index)=>({label,correct:index===q.a})));return {...q,opts,correct:opts.findIndex(o=>o.correct)};});
+}
+function startSession(items){session=prepare(items);current=0;answers=Array(session.length).fill(null);revealed=false;showStage("quiz-card");showTab("quiz");renderQuestion();}
+function newSession(){const pool=BANK.filter(q=>$("topic").value==="all"||q.t===$("topic").value);startSession(randomize(pool).slice(0,Math.min(pool.length,desiredCount)));}
+function renderQuestion(){
+  if(current>=session.length){renderResults();return;}
+  revealed=false;
+  const q=session[current],pct=100*current/session.length;
+  $("question-number").textContent=`Spørsmål ${current+1} av ${session.length}`;
+  $("quiz-mode").textContent=mode==="practice"?"Øvemodus":"Prøvemodus";
+  $("progress-bar").style.width=pct+"%";$("progress").setAttribute("aria-valuenow",Math.round(pct));
+  $("question-topic").textContent=TITLES[q.t];$("question-text").textContent=q.q;
+  $("options").innerHTML="";
+  q.opts.forEach((o,i)=>{const b=document.createElement("button");b.className="answer-option";b.type="button";b.innerHTML=`<span class="letter">${"ABCD"[i]}</span><span>${escapeHTML(o.label)}</span>`;b.addEventListener("click",()=>selectAnswer(i));$("options").appendChild(b);});
+  $("hint-text").textContent=q.h;$("hint-text").classList.add("hidden");$("hint-toggle").setAttribute("aria-expanded","false");
+  $("feedback").classList.add("hidden");$("feedback").classList.remove("is-wrong");$("feedback").innerHTML="";
+  $("next").disabled=true;$("next").textContent=current===session.length-1?"Se resultatet →":"Neste spørsmål →";
+  $("hint-box").classList.toggle("hidden",mode==="test");
+}
+function selectAnswer(i){
+  if(mode==="practice"&&revealed)return;
+  const q=session[current];answers[current]=i;
+  const bs=[...$("options").children];bs.forEach((b,j)=>{b.classList.toggle("selected",j===i);b.setAttribute("aria-pressed",String(j===i));});
+  $("next").disabled=false;
+  if(mode==="practice"){
+    revealed=true;
+    bs.forEach((b,j)=>{b.disabled=true;if(j===q.correct)b.classList.add("correct");if(j===i&&i!==q.correct)b.classList.add("wrong");});
+    const good=i===q.correct;
+    $("feedback").classList.remove("hidden");$("feedback").classList.toggle("is-wrong",!good);
+    $("feedback").innerHTML=`<strong>${good?"✅ Riktig!":"💡 Nesten – her er forklaringen"}</strong><p>${escapeHTML(q.e)}</p>`;
+  }
+}
+function renderResults(){
+  showStage("results");
+  const correct=session.reduce((sum,q,i)=>sum+(answers[i]===q.correct?1:0),0);
+  const pct=Math.round(correct*100/session.length);const wrong=session.length-correct;
+  $("total-score").innerHTML=`${correct} <small>av ${session.length}</small>`;
+  $("percent").textContent=pct+" %";$("correct-count").textContent=correct;$("wrong-count").textContent=wrong;
+  $("result-msg").textContent=pct===100?"Fantastisk! Du kan dette veldig godt!":pct>=80?"Kjempebra! Du har forstått det meste.":pct>=60?"Bra jobbet! Les forklaringene og øv litt til.":"God innsats! Prøv en ny runde i øvemodus.";
+  try{const old=Number(localStorage.getItem(bestKey)||0);if(pct>old)localStorage.setItem(bestKey,String(pct));}catch(e){}updateBest();
+  $("retry-wrong").disabled=wrong===0;showAllReview=false;renderReview();
+  $("progress-bar").style.width="100%";
+  $("results").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function renderReview(){
+  const wrong=session.map((q,i)=>i).filter(i=>answers[i]!==session[i].correct);
+  const indices=showAllReview?session.map((q,i)=>i):wrong;
+  $("review-info").textContent=wrong.length===0?"Du svarte riktig på alle spørsmålene!":`Du svarte feil på ${wrong.length} spørsmål. Her får du fasit og en kort forklaring.`;
+  $("toggle-review").textContent=showAllReview?"Vis bare feilene":"Vis også riktige svar";
+  $("review-list").innerHTML=indices.length?indices.map(i=>{
+    const q=session[i],good=answers[i]===q.correct;
+    return `<article class="review-item"><div class="qtitle">${i+1}. ${escapeHTML(q.q)}<span class="review-tag ${good?"":"missed"}">${good?"Riktig":"Øv mer"}</span></div><p><strong>Du svarte:</strong> ${escapeHTML(q.opts[answers[i]]?.label||"Ikke besvart")}</p><p><strong>Riktig svar:</strong> ${escapeHTML(q.opts[q.correct].label)}</p><p>${escapeHTML(q.e)}</p></article>`;
+  }).join(""):"<p class='subtle'>Ingen feil å vise. Se alle svar hvis du vil lese forklaringene igjen.</p>";
+}
+function init(){
+  console.assert(BANK.length===40,"Spørsmålsbanken må ha 40 spørsmål.");
+  console.assert(BANK.every(q=>q.o.length===4&&q.a>=0&&q.a<4),"Ugyldig spørsmål.");
+  updateBest();
+  document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
+  document.querySelectorAll("[data-to-quiz]").forEach(b=>b.addEventListener("click",()=>showTab("quiz")));
+  document.querySelectorAll("#mode-choices button").forEach(b=>b.addEventListener("click",()=>{mode=b.dataset.mode;document.querySelectorAll("#mode-choices button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));$("mode-description").textContent=mode==="practice"?"Du får vite riktig svar og en forklaring etter hvert spørsmål.":"Du får resultat og fasit når hele prøven er ferdig.";}));
+  document.querySelectorAll("#count-choices button").forEach(b=>b.addEventListener("click",()=>{desiredCount=Number(b.dataset.count);document.querySelectorAll("#count-choices button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));normalizeCount();}));
+  $("topic").addEventListener("change",normalizeCount);
+  $("start").addEventListener("click",newSession);
+  $("next").addEventListener("click",()=>{if(answers[current]===null)return;current++;renderQuestion();});
+  $("hint-toggle").addEventListener("click",()=>{const h=$("hint-text");const open=h.classList.toggle("hidden");$("hint-toggle").setAttribute("aria-expanded",String(!open));});
+  $("quit").addEventListener("click",()=>{if(confirm("Vil du avslutte denne økten? Svarene i økten blir ikke lagret."))showStage("setup");});
+  $("retry").addEventListener("click",newSession);
+  $("retry-wrong").addEventListener("click",()=>{const missed=session.filter((q,i)=>answers[i]!==q.correct).map(q=>BANK.find(b=>b.q===q.q));if(!missed.length)return;mode="practice";document.querySelectorAll("#mode-choices button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.mode===mode)));$("mode-description").textContent="Du får vite riktig svar og en forklaring etter hvert spørsmål.";startSession(missed);});
+  $("go-setup").addEventListener("click",()=>{showStage("setup");window.scrollTo({top:0,behavior:"smooth"});});
+  $("toggle-review").addEventListener("click",()=>{showAllReview=!showAllReview;renderReview();});
+  let circuitClosed=false;
+  $("switch-button").addEventListener("click",()=>{circuitClosed=!circuitClosed;$("lamp").classList.toggle("on",circuitClosed);$("switch-line").setAttribute("x2",circuitClosed?"185":"177");$("switch-line").setAttribute("y2",circuitClosed?"155":"126");$("switch-button").textContent=circuitClosed?"Åpne bryteren":"Lukk bryteren";$("circuit-status").textContent=circuitClosed?"Bryteren er lukket. Kretsen er sammenhengende, og pæra lyser!":"Bryteren er åpen. Pæra er av.";});
+  function showCharges(a,b){$("charge-a").textContent=a;$("charge-b").textContent=b;$("charge-a").className="charge "+(a==="+"?"plus":"minus");$("charge-b").className="charge "+(b==="+"?"plus":"minus");const similar=a===b;$("charge-arrow").textContent=similar?"← →":"→ ←";$("charge-description").textContent=similar?"Like ladninger frastøter hverandre.":"Ulike ladninger tiltrekker hverandre.";}
+  $("same-charge").addEventListener("click",()=>showCharges("+","+"));$("different-charge").addEventListener("click",()=>showCharges("+","−"));$("negative-charge").addEventListener("click",()=>showCharges("−","−"));
+  normalizeCount();
+}
+init();
+</script>
+</body>
+</html>
